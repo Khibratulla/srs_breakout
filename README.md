@@ -19,8 +19,10 @@
 ## Сборка (Windows, MinGW-w64)
 
 ```bash
-g++ main.cpp glad/src/gl.c -Iinclude -Iglad/include -Llib-mingw-w64 -lglfw3 -lgdi32 -o breakout.exe
+g++ main.cpp glad/src/gl.c -Iinclude -Iglad/include -Llib-mingw-w64 -lglfw3 -lgdi32 -static -O2 -o breakout.exe
 ```
+
+Флаг `-static` встраивает библиотеки MinGW в exe, поэтому `breakout.exe` запускается на любом Windows 10/11 без установленного MinGW.
 
 ## Структура проекта
 
